@@ -10,12 +10,4 @@ public class Config {
   public String getEnvironment() {
     return environment;
   }
-
-  public void enableDebug() {
-    this.debugMode = true;
-  }
-
-  public boolean isDebugMode() {
-    return debugMode;
-  }
 }
