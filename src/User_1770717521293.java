@@ -1,3 +1,8 @@
+/**
+ * Service Layer
+ * Handles business logic
+ */
+
 public class User {
   private String name;
 
