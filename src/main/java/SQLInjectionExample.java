@@ -38,8 +38,8 @@ public class SQLInjectionExample {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         String login = args[0];
-        Query query = entityManager.createQuery("SELECT u FROM Admin u WHERE u.login = '" + login + "'");
-        List<User> resultList = query.getResultList();
+        Query humanQuery = entityManager.createQuery("SELECT u FROM Admin u WHERE u.login = '" + login + "'");
+        List<User> resultList = humanQuery.getResultList();
         System.out.println(resultList);
 
         entityManager.close();
