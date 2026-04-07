@@ -6,17 +6,17 @@ public class ServiceLayer {
     this.serviceId = serviceId;
   }
 
-  // Method A — will survive in V2 (kept at same position)
+  // Method A — unchanged
   public String processRequest(String requestInput) {
     return PREFIX + ":" + serviceId + ":" + requestInput;
   }
 
-  // Method B — will be DELETED in V2
-  public boolean validateAndCheckInput(String requestInput) {
-    return requestInput != null && !requestInput.isEmpty();
+  // Human-written addition (no inference) — pushes C DOWN in line numbering
+  public void logEvent(String eventMessage) {
+    System.out.println(serviceId + " - event: " + eventMessage);
   }
 
-  // Method C — will be MOVED DOWN in V2 (human method inserted before it)
+  // Method C — moved (different line numbers vs V1), same content → same hash
   public String formatOutputWithBrackets(String result) {
     return "[" + serviceId + "]-formatted-result: " + result;
   }
