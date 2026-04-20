@@ -5,3 +5,5 @@ Squash Merge
 Squash Merge - commit#2
 
 Merge commit
+
+Rebase and merge 
