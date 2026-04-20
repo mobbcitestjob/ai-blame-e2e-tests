@@ -7,3 +7,4 @@ Squash Merge - commit#2
 Merge commit
 
 Rebase and merge 
+Rebase and merge  -commit#2
