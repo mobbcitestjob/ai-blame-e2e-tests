@@ -3,3 +3,5 @@
 Test for merge types
 Squash Merge
 Squash Merge - commit#2
+
+Merge commit
