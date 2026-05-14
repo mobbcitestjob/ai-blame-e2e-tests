@@ -29,12 +29,17 @@ public class ServiceLayer {
   // Duplicate lines test (3 -> 1)
   public void processItemsThreeTimes(String item) {
     System.out.println("Processing item with highly specific log message: " + item + " for service: " + serviceId);
+    System.out.println("Processing item with highly specific log message: " + item + " for service: " + serviceId);
+    System.out.println("Processing item with highly specific log message: " + item + " for service: " + serviceId);
   }
 
   // Duplicate lines test (1 -> 3)
   public void processItemsOneTime(String item) {
     System.out.println("Another highly specific log message for duplicate testing: " + item + " - " + serviceId);
-    System.out.println("Another highly specific log message for duplicate testing: " + item + " - " + serviceId);
-    System.out.println("Another highly specific log message for duplicate testing: " + item + " - " + serviceId);
+  }
+
+  // TAB_AUTOCOMPLETE non-code-generation test method
+  public void runNonCodeGenMethod(String requestInput) {
+    System.out.println("This is a non code generation method that should be ignored by the pr survival calculation: " + requestInput);
   }
 }
