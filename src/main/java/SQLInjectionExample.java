@@ -1,9 +1,14 @@
 import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 import javax.persistence.*;
 
+// This is a sample Java file with a SQL injection vulnerability for testing purposes.
 public class SQLInjectionExample {
     @Entity
     @Table(name = "users")
+
+    // User entity representing a user in the system.
     public static class User {
 
         @Id
@@ -14,6 +19,7 @@ public class SQLInjectionExample {
         private String login;
     }
 
+    // Added comments and formatting changes to move lines
     public static void main(String[] args) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -26,7 +32,7 @@ public class SQLInjectionExample {
         entityManager.close();
         entityManagerFactory.close();
     }
-
+    
     public static void test2(String[] args) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -38,5 +44,13 @@ public class SQLInjectionExample {
 
         entityManager.close();
         entityManagerFactory.close();
+    }
+
+    public static void test3(String[] args) {
+        String s = new Random()
+            .ints(5, 1, 10)
+            .mapToObj(i -> i + "_")
+            .collect(Collectors.joining());
+        System.out.println(s);
     }
 }
