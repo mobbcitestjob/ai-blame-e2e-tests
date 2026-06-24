@@ -1,3 +1,6 @@
+// Product Service
+// Version 1.0
+
 public class Product {
   private String id;
   private String name;
