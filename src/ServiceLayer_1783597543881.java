@@ -16,19 +16,9 @@ public class ServiceLayer {
     return requestInput != null && !requestInput.isEmpty();
   }
 
-  // Human-written addition (no inference) — pushes C DOWN in line numbering
-  public void logEvent(String eventMessage) {
-    System.out.println(serviceId + " - event: " + eventMessage);
-  }
-
   // Method C — will be MOVED DOWN in V2 (human method inserted before it)
   public String formatOutputWithBrackets(String result) {
     return "[" + serviceId + "]-formatted-result: " + result;
-  }
-
-  // Method D — will be MOVED to Helper class in V2
-  public String generateUniqueSecureTokenForRequest(String serviceId, String requestInput) {
-    return "token_" + serviceId + "_" + requestInput.hashCode() + "_" + System.currentTimeMillis();
   }
 
   // Duplicate lines test (3 -> 1)
