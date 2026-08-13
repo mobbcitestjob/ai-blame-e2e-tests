@@ -11,11 +11,6 @@ public class ServiceLayer {
     return PREFIX + ":" + serviceId + ":" + requestInput;
   }
 
-  // Method B — will be DELETED in V2
-  public boolean validateAndCheckInput(String requestInput) {
-    return requestInput != null && !requestInput.isEmpty();
-  }
-
   // Method C — will be MOVED DOWN in V2 (human method inserted before it)
   public String formatOutputWithBrackets(String result) {
     return "[" + serviceId + "]-formatted-result: " + result;
