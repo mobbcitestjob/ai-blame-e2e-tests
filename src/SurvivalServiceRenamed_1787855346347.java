@@ -1,3 +1,9 @@
+// Generated utility block (non-AI surroundings)
+// padding line 1
+// padding line 2
+// padding line 3
+// padding line 4
+// padding line 5
 public class SurvivalTarget {
     private static final String PREFIX = "processed";
     private static final int MAX_SCORE = 100;
