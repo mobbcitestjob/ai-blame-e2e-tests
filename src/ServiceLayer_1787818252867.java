@@ -11,6 +11,16 @@ public class ServiceLayer {
     return PREFIX + ":" + serviceId + ":" + requestInput;
   }
 
+  // Method B — will be DELETED in V2
+  public boolean validateAndCheckInput(String requestInput) {
+    return requestInput != null && !requestInput.isEmpty();
+  }
+
+  // Human-written addition (no inference) — pushes C DOWN in line numbering
+  public void logEvent(String eventMessage) {
+    System.out.println(serviceId + " - event: " + eventMessage);
+  }
+
   // Method C — will be MOVED DOWN in V2 (human method inserted before it)
   public String formatOutputWithBrackets(String result) {
     return "[" + serviceId + "]-formatted-result: " + result;
